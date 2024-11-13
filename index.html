@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>CaterGo</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo_caterGo.png" alt="logo CaterGo">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Registrace cateringu</a></li>
+                <li><a href="#" class="btn">Registrovat se</a></li>
+                <li><a href="#" class="btn">Přihlásit se</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="images">
+            <img src="img/pribor.png" alt="Příbory" class="cutlery">
+            <img src="img/pribor.png" alt="Příbory" class="cutlery2">
+        </div>
+
+
+        <div class="box">
+            <h2>Kalkulačka cateringu</h2>
+            <label for="supplier">Vyberte dodavatele:</label>
+            <select id="supplier">
+                <option value="justFood">Just Food</option>
+                <option value="yourMama">Your Mama</option>
+                <option value="flavourHaven">Flavour Haven</option>
+            </select>
+
+            <label for="numberOfPeople">Zadejte počet hostů:</label>
+            <input type="number" id="numberOfPeople" min="10">
+
+            <label for="event">Vyberte příležitost:</label>
+            <select id="event">
+                <option value="Narozeninová oslava">Narozeninová oslava</option>
+                <option value="Svatba">Svatba</option>
+                <option value="Firemní akce">Firemní akce</option>
+                <option value="Konference">Konference</option>
+                <option value="Jiná příležitost">Jiná příležitost</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="service">
+                Zajistit obsluhu (+ 100 Kč na osobu)
+            </label>
+
+            <button onclick="createOrder()">Spočítat</button>
+
+
+            <p id="result"></p>
+            <p id="error-message"></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MadlaArt. Všechna práva vyhrazena.</p>
+            <div class="footer-links">
+                <a href="#">O nás</a>
+                <a href="#">Podmínky použití</a>
+                <a href="#">Ochrana osobních údajů</a>
+                <a href="#">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
