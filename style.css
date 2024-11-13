@@ -6,15 +6,15 @@
     list-style: none;
 }
 
-html, body {
-    height: 100%; 
+html,
+body {
+    height: 100%;
     margin: 0;
 }
 
 body {
-   /* background-color: #a0c0c0; */
-   background: linear-gradient(135deg, #a0c0c0, #e1e8e3);
-   font-family: "Lora", serif;
+    background: linear-gradient(135deg, #a0c0c0, #e1e8e3);
+    font-family: "Lora", serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -22,30 +22,30 @@ body {
 
 header {
     width: 70%;
-    padding: 20px 40px; 
+    padding: 20px 40px;
     margin: 15px auto;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 .logo img {
     max-width: 150px;
-   
 }
 
 .nav ul {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
 }
 
 .nav ul li a {
     color: #003300;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px 15px; 
+    padding: 5px 10px;
+    font-family: "Montserrat", sans-serif;
 }
-
 
 .nav ul li a {
     color: #003300;
@@ -65,18 +65,25 @@ header {
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    
 }
 
 .btn:hover {
     background-color: #FFCC66;
 }
 
-.logo img {
-    max-width: 150px;
-   
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
 }
 
+
+
+
+/* Zbytek stylů */
 main {
     flex: 1;
     display: flex;
@@ -93,22 +100,23 @@ main {
     z-index: 0;
 }
 
-.cutlery, .cutlery2 {
+.cutlery,
+.cutlery2 {
     position: absolute;
     top: 20%;
     right: 15%;
-    width: 300px; 
-    opacity: 0.1;  
-    transform: rotate(15deg);  
+    width: 300px;
+    opacity: 0.1;
+    transform: rotate(15deg);
 }
 
 .cutlery {
     position: absolute;
     top: 20%;
     left: 15%;
-    width: 300px;  
-    opacity: 0.1; 
-    transform: rotate(-15deg);  
+    width: 300px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
 }
 
 .box {
@@ -160,7 +168,7 @@ main {
 
 .box select:focus,
 .box input[type="number"]:focus {
-    border-color: #ee9612; /* zachováno jako indikace zaostření */
+    border-color: #ee9612;
     outline: none;
 }
 
@@ -176,7 +184,7 @@ main {
     font-size: 1em;
     font-weight: bold;
     color: #ffffff;
-    background-color: #ff7f00; /* Původní oranžová barva tlačítka */
+    background-color: #ff7f00;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -184,7 +192,7 @@ main {
 }
 
 .box button:hover {
-    background-color: #FFCC66; /* Tmavší odstín oranžové pro hover efekt */
+    background-color: #FFCC66;
     transform: scale(1.02);
 }
 
@@ -193,6 +201,7 @@ main {
     font-weight: bold;
     font-size: 16px;
 }
+
 footer {
     background-color: #003300;
     color: #ffffff;
@@ -221,4 +230,40 @@ footer {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/*queries*/
+@media (max-width: 1120px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #003300;
+        opacity: 0.5;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav ul li a {
+        font-size: 16px;
+        padding: 10px;
+        color: #ffffff;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        background-color: #003300;
+    }
 }

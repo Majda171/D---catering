@@ -30,3 +30,8 @@ const createOrder = () => {
     const result = `<h2>Shrnutí</h2> Událost "${event}" s cateringem od ${supplierNames[supplier]} pro ${numberOfPeople} lidí za ${price} Kč.`;
     document.querySelector("#result").innerHTML = result;
 }    
+
+document.querySelector('#hamburger').addEventListener('click', function() {
+    const menu = document.querySelector('.nav ul');
+    menu.classList.toggle('active'); 
+});
