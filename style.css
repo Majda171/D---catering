@@ -72,7 +72,6 @@ header {
     background-color: #FFCC66;
 }
 
-/* Hamburger menu */
 .hamburger {
     display: none;
     font-size: 30px;
@@ -84,7 +83,7 @@ header {
 
 
 
-/* Zbytek stylů */
+
 main {
     flex: 1;
     display: flex;
@@ -279,7 +278,7 @@ footer {
 }
 @media (max-width: 400px) {
     body {
-        padding: 0; /* Zabrání přetékání kvůli paddingu */
+        padding: 0; 
     }
 
     .box {
