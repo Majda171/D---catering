@@ -271,7 +271,12 @@ footer {
         
     }
 }
-
+#result{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
 @media (max-width: 400px) {
     body {
         padding: 0; /* Zabrání přetékání kvůli paddingu */
